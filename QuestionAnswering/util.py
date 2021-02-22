@@ -246,11 +246,6 @@ def evaluate(examples, predicted_s, predicted_e, token_to_orig_maps, entity_refi
                     if elem[1] > s and elem[1] < t:
                         predicted.append([s, t])
                         continue
-    
-        if len(golden) > 1:
-            predicted = predicted
-        else:
-            predicted = predicted[:1]
         golden_set = set()
         for elem in golden: golden_set.add(tuple(elem))
 
